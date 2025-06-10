@@ -1,0 +1,153 @@
+/* 1. Reset & Background */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 40px 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 420px;
+    margin-bottom: 50px;
+}
+h1 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+input[type="text"],
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 8px 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: linear-gradient(to right, #00f0ff, #7f00ff);
+    color: white;
+    box-shadow: 0 0 10px #00f0ff, 0 0 40px #7f00ff;
+    transition: transform 0.2s ease-in-out;
+}
+button:hover {
+    transform: scale(1.05);
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #222;
+}
+
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+ul::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+}
+ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+li {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    flex-wrap: wrap;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+.taskname {
+    text-align: left;
+    flex: 1 1 200px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: linear-gradient(to right, #ffffff, #c0a5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.item-detail {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.item-detail.total span {
+    color: #fff;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+}
+.Cancel {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    box-shadow: 0 0 10px #ff416c, 0 0 20px #ff4b2b;
+}
+
+.edit {
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    box-shadow: 0 0 10px #2193b0, 0 0 20px #6dd5ed;
+}
+
+.complete {
+    background: linear-gradient(to right, #00f260, #0575e6);
+    box-shadow: 0 0 10px #00f260, 0 0 20px #0575e6;
+}
+.taskname.line-through {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
